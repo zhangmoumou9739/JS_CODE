@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cheer.css">
+</head>
+<body>
+    <script src="./js/rem.js"></script>
+    <header>
+        <img src="./images/cheer/head.jpg" alt="">
+    </header>
+    <div id="occupation"></div>
+ 
+    <section>
+      <ul class="getcheer">
+
+      </ul>
+    </section>
+    <footer>
+        <img src="./images/cheer/ending.jpg" alt="">
+    </footer>
+    <script>
+    var xmlhttp;
+		if (window.XMLHttpRequest) {
+			//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			// IE6, IE5 浏览器执行代码
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange = function () {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				//xmlhttp.responseText;
+				//你的ajax代码写在这里，其他位置除了open的前两个参数都不需要也不要改变。
+        var egetcheer = document.getElementsByClassName("getcheer")[0];
+        function addLi(li){
+          var n = ` 
+            <a>${li.a}</a>       
+            <img src = "${li.img}">     
+            <p>${li.p}</p>
+            <button>${li.button}</button>
+            <b>${li.b}</b> <i>${li.i}</i>   
+            
+          `;
+          var nli = document.createElement("li");
+          nli.innerHTML = n;
+          egetcheer.appendChild(nli);
+        }
+        
+        var json = JSON.parse(xmlhttp.responseText);/* 将字符串转换成JSON */
+          for(var i=0; i<json.length; i++){
+            for(var key in json[i]){
+              console.log(key+":"+json[i]["i"]);
+            }
+              addLi(json[i]);
+          }
+			}
+		}
+		xmlhttp.open("GET", "./json/cheer.json", true);
+		xmlhttp.send();
+    </script>
+</body>
+</html>
