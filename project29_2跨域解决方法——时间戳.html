@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+
+margin: 0;
+
+padding: 0;
+
+list-style: none;
+
+text-decoration: none;
+
+}
+
+#canvas{
+
+width: 800px;
+
+height: 400px;
+
+overflow: hidden;
+
+border: 2px solid #999;
+
+position: relative;
+
+}
+
+canvas img{
+
+width: 800px;
+
+height: 400px;
+
+}
+
+#imglist{
+
+width: 4000px;
+
+height: 400px;
+
+}
+
+#imglist li{
+
+float: left;
+
+}
+
+
+
+        #canvas{
+            border:solid 1px #999;
+        }
+        #color{
+            width:100px;
+            height:100px;
+        }
+    
+        </style>
+</head>
+<body>
+
+    <!-- <canvas id="canvas" width="310" height="240"></canvas> -->
+    <div id="color"></div>
+  <canvas id="canvas">
+    <ul id="imglist">
+      <li><a href=""><img src="./images/mainpage/rotation1.jpg" alt=""></a></li>   
+    <li><a href=""><img src="./images/mainpage/rotation2.jpg" alt=""></a></li>   
+    <li><a href=""><img src="./images/mainpage/rotation3.jpg" alt=""></a></li>  
+    <li><a href=""><img src="./images/mainpage/rotation4.jpg" alt=""></a></li>   
+    <li><a href=""><img src="./images/mainpage/rotation1.jpg" alt=""></a></li>    
+    </ul>
+    </canvas>
+
+
+
+
+    <script>
+
+var eimglist = document.querySelector('#imglist');
+var etest = document.querySelector('#test');
+var eprev = document.querySelector('.prev');
+var enext = document.querySelector('.next');
+var left = 0;
+var timer;
+run();
+function run(){
+if (left <= -3200) {
+left = 0;
+}
+var m = Math.floor(-left/800) ;
+imglist.style.marginLeft = left + 'px';
+var n = (left % 800 == 0) ? n = 1200 : n = 6;
+left -= 10;
+timer = setTimeout(run,n);
+}
+eimglist.onmouseover = function(){
+clearTimeout(timer);
+}
+eimglist.onmouseout = function(){
+run();}
+
+
+    var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+var img = new Image();
+var url = 'https://media.prod.mdn.mozit.cloud/attachments/2013/06/22/5397/7a3ec0cae64a95ad454ac3bc2c71c004/rhino.jpg';
+img.src = url + '?' + new Date().getTime();
+img.setAttribute('crossOrigin', '');
+img.onload = function() {
+  ctx.drawImage(img, 0, 0);
+  img.style.display = 'none';
+};
+
+var color = document.getElementById('color');
+
+function pick(event) {
+  var x = event.layerX;
+  var y = event.layerY;
+  var pixel = ctx.getImageData(x, y, 1, 1);
+  var data = pixel.data;
+  var rgba = 'rgba(' + data[0] + ',' + data[1] +
+             ',' + data[2] + ',' + (data[3] / 255) + ')';
+  color.style.background =  rgba;
+  color.textContent = rgba;
+}
+
+canvas.addEventListener('mousemove', pick);
+    </script>
+</body>
+</html>
