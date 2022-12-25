@@ -1,0 +1,154 @@
+body{
+  background-color: rgb(241, 241, 241);
+  overflow-x: hidden;
+}
+header {
+  position: relative;
+  margin: 0.1rem auto;
+  padding: 0.1666rem;
+  background-color: #ffffff;
+  width: 88%;
+  border-radius: 8px;
+}
+header .loginHeader {
+  display: flex;
+  align-items: center;
+}
+.loginJump img {
+  width: 100%;
+  height: 100%;
+  width: 0.3rem;
+  height: 0.3rem;
+  overflow: hidden;
+  background-color: #ebebeb;
+  padding: 0.1rem;
+  border-radius: 50%;
+}
+.loginHeader h4{
+  font-size: 0.1666rem;
+}
+#loginHeader{
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+#loginHeader a{
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+.userinfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+}
+.userinfo li {
+  text-align: center;
+  border-radius: 8px;
+  margin: 0 0.05rem 0 0.05rem;
+  background-color: #ffffff;
+}
+.userinfo li p {
+  font-size: 0.14rem;
+}
+.userinfo li a{
+  font-size: 0.2rem;
+}
+.userinfo2{
+  display: flex;
+  justify-content: space-between;
+  margin: 0.1rem auto;
+  background-color: #ffffff;
+  width: 88%;
+  padding: 0.1666rem;
+  border-radius: 8px;
+}
+.userinfo2 li a{
+  font-size: 0.35rem;
+}
+.userinfo2 li p{
+  font-size: 0.13rem;
+  text-align: center;
+}
+.history, .all-icon {
+  border-radius: 8px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0.1rem;
+  margin-top: 0.2rem;
+  background-color: white;
+}
+.history .title{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.05rem 0;
+}
+.history ul,
+.all-icon ul {
+  display: flex;
+  justify-content: space-between;
+}
+.history ul li,
+.all-icon ul li {
+  width: 32%;
+  font-size: 0.14rem;
+  text-align: center;
+  margin: 0.1rem 0;
+}
+.history ul li i,
+.all-icon ul li i {
+  font-size: 0.32rem !important;
+}
+.history ul li p,
+.all-icon ul li p {
+  font-size: 0.12rem;
+  color: #999;
+}
+.slipbox{
+  display: -webkit-box;
+  overflow-x: scroll;
+}
+.slipbox div{
+  width: 2rem;
+}
+.slipbox p{
+  color: #000000;
+  text-align: center;
+  width: 90%;
+}
+/*去掉滚动条*/
+.slipbox::-webkit-scrollbar{
+  width:0; 
+  height:0; 
+  display: none;
+}
+.slipbox img{
+  display: flex;
+  width: 90%;
+  margin-right: 0.0933rem;
+  border-radius: 10px;
+}
+
+.list {
+  border-radius: 8px;
+  width: 95%;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 0.1rem;
+}
+.list li {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e4dfdf;
+}
+.list li i {
+  font-size: 0.3rem;
+  color: #999;
+  margin: 0 0.1rem;
+}
+.list li:last-child {
+  border: none;
+}
+

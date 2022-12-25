@@ -1,0 +1,58 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow-x: hidden;
+}
+header img, footer img{
+  width: 100%;  
+}
+footer{
+    position: relative;
+    top: -0.1rem;
+}
+section{
+    background-color: #690f29;
+    position: relative;
+    top: -0.1rem;
+}
+section img{
+    width: 30%;
+}
+section p{
+    color: #fff;
+    position: relative;
+    top: -0.69rem;
+    left: 1.4rem;
+    font-size: 0.12rem;
+
+}
+section b,section i{
+    color:#d24c73;
+    position: relative;
+    top: -0.42rem;
+    left: 0.7rem;
+    font-size: 0.12rem;
+}
+section button{
+    background-color: #d24c73;
+    font-size: 0.12rem;
+    color: #fff;
+    padding: 0.05rem 0.23rem 0.05rem 0.23rem;
+    border-radius: 0.05rem;
+    position: relative;
+    left: 2.9rem;
+    letter-spacing: -0.01rem;
+    top: -0.45rem;
+}
+section a{
+    position: relative;
+    top: -0.51rem;
+    left:0.26rem;
+    color: #fff;
+    background-color: rgb(223, 193, 148);
+    padding: 0rem 0.07rem 0rem 0.07rem;
+    font-size: 0.1rem;
+}

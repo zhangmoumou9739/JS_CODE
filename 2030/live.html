@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./font_3773143_mlwbitziz5e/iconfont.css" />
+    <link rel="stylesheet" href="./css/live.css" />
+    <link rel="stylesheet" href="./css/nav.css">
+  </head>
+  <body>
+    <script src="./js/rem.js"></script>
+    <header>
+      <img src="./images/nav/logo_main_white.png" alt="">
+    </header>
+
+    <section>    
+      <div class="member">
+        <img src="./images/live/head.png" alt="">
+        <!-- <div id="getMember"><img src="./images/shortTV/member3.png" alt=""></div>
+        <span id="getMember2">
+          <a>立即登录</a>
+          <p>开通会员，尊享海量片库</p>
+        </span> -->
+      </div>
+      <div id="slideback">
+        <div id="rotation">
+          <ul id="imglist">
+              <li><a href=""><img src="./images/live/slide1.jpg" alt=""></a></li>
+              <li><a href=""><img src="./images/live/slide2.png" alt=""></a></li>
+              <li><a href=""><img src="./images/live/slide3.jpg" alt=""></a></li>
+              <li><a href=""><img src="./images/live/slide4.png" alt=""></a></li>
+              <li><a href=""><img src="./images/live/slide1.png" alt=""></a></li>
+          </ul>
+          <ul id="icolist">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+          </ul>
+        </div>
+        <div id="test"></div>
+      </div>
+      <div id="midgrid">
+          <img src="./images/live/midicon1.png" alt="">
+          <img src="./images/live/midicon2.png" alt="">
+          <img src="./images/live/midicon3.png" alt="">
+          <img src="./images/live/midicon4.png" alt="">
+      </div>
+      <div class="race">
+          <img src="./images/live/sectiontitle2.png" alt="">
+          <ul class="booking">
+
+      <div id="gotop">
+          返回顶部 
+      </div>      
+          </ul>
+      </div>
+      <div class="itemtitle"><img src="./images/live/sectiontitle1.png" alt=""></div>
+      <ul class="item">
+        <li>
+          <img src="./images/live/play1.jpg" alt="" />
+          <p>《你好，世界杯》第1期</p>
+        </li>
+        <li>
+          <img src="./images/live/play2.jpg" alt="" />
+          <p>《你好，世界杯》第1期</p>
+        </li>
+        <li>
+          <img src="./images/live/play1.jpg" alt="" />
+          <p>《你好，世界杯》第1期</p>
+        </li>
+        <li>
+          <img src="./images/live/play2.jpg" alt="" />
+          <p>《你好，世界杯》第1期</p>
+        </li>
+      </ul>
+      <div class="activity">
+        <div class="actimg"><img src="./images/live/sectiontitle3.png" alt=""></div>
+        <img src="./images/live/act.png" alt="">
+        <img src="./images/live/act1.png" alt="">
+        <a href="cheer.html"><img src="./images/live/act2.png" alt=""></a>
+      </div>
+    </section>
+    <nav>
+      <ul>
+        <li>
+            <a href="./index.html">
+                <span class="iconfont icon-zhuye"></span>
+                <p>首页</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="iconfont icon-dianshi"></span>
+                <p>电视</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="iconfont icon-q24gl-stopSquare"></span>
+                <p>直播</p>
+            </a>
+        </li>
+        <li>
+            <a href="./member.html">
+                <span class="iconfont icon-jinrongquan"></span>
+                <p>会员</p>
+            </a>
+        </li>
+        <li>
+            <a href="./mine.html">
+                <span class="iconfont icon-wode"></span>
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+    </nav>
+    <script>
+       var esico = document.getElementById('icolist').getElementsByTagName('li');
+    var eicolist = document.querySelector('#icolist');
+    var eimglist = document.querySelector('#imglist');
+    var etest = document.querySelector('#test');
+    var eprev = document.querySelector('.prev');
+    var enext = document.querySelector('.next');
+    var left = 0;
+    var timer;
+
+    esico[2].style.backgroundColor = 'red';
+    run();
+    function run(){
+      if (left <= -400) {
+      left = 0;
+      }
+      var m = Math.floor(-left/100) ;
+      imglist.style.marginLeft = left + '%';
+      var n = (left % 100 == 0) ? n = 1200 : n = 6;
+      left -= 2;
+      icochange(m);
+      timer = setTimeout(run,n);
+    }
+
+    function icochange(m){
+      for (let index = 0; index < esico.length; index++) {
+        esico[index].style.backgroundColor = '';
+      }
+      if (m <esico.length){
+        esico[m].style.backgroundColor = '#9f9f98';
+      }
+
+    }
+
+
+    eicolist.onclick = function(){
+      var tg = event.target;
+      let ico = tg.innerHTML - 1;
+      imgchange(ico);
+      icochange(ico);
+    }   
+
+    eimglist.onmouseover = function(){
+      clearTimeout(timer);
+    }
+
+    eimglist.onmouseout = function(){
+      run();
+    }
+
+  
+     var xmlhttp;
+		if (window.XMLHttpRequest) {
+			//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			// IE6, IE5 浏览器执行代码
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange = function () {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				//xmlhttp.responseText;
+				//你的ajax代码写在这里，其他位置除了open的前两个参数都不需要也不要改变。
+        var ebooking = document.getElementsByClassName("booking")[0];
+        function addLi(li){
+          var n = ` 
+            <div>   
+            <dl>${li.dl}</dl>
+            <div class="nation1"> 
+            <img src = "${li.img}">
+            <a>${li.a}</a>
+            </div> 
+            <div class="nation2">
+            <img src = "${li.img1}">
+            <a>${li.a1}</a>
+            </div>
+             <p  onclick ="time()">${li.p}</p>
+              
+              <button>${li.button}</button>
+            </div>  
+            <h4>${li.h4}</h4>
+          `;
+          var nli = document.createElement("li");
+          nli.innerHTML = n;
+          ebooking.appendChild(nli);
+        }
+       
+        var json = JSON.parse(xmlhttp.responseText);/* 将字符串转换成JSON */
+          for(var i=0; i<json.length; i++){
+              addLi(json[i]);
+          }
+			}
+		}
+		xmlhttp.open("GET", "./json/live.json", true);
+		xmlhttp.send();
+
+
+
+    var gotop = document.querySelector("#gotop");
+    var body = document.querySelector("body");
+    window.addEventListener("scroll" , function(){
+        if(window.pageYOffset >= body.offsetTop+200){
+          gotop.style.display = "block";
+        }else{
+          gotop.style.display = "none";
+        }
+
+        gotop.addEventListener("click" , function(){
+          window.scroll(0,0);
+        })
+    })
+
+
+    // var button = document.getElementsByTagName("button");
+    function time(){
+      let second = document.querySelector("p");
+            let i = 10  // 倒计时秒数
+
+            // 定时器 每隔一秒变化一次（1000ms = 1s）
+            let t = setInterval(countDown, 1000);
+
+            function countDown() {
+                    console.log(i);
+                    if(i>=1){
+                      i--;
+                    second.innerHTML = i;
+                    }
+                    
+
+
+
+                    // // 60 秒倒计时结束
+                    if (i === 0)
+                    second.innerHTML = "时间已到";
+                        clearInterval();
+                        
+
+                    // i--;
+          
+        }
+    }
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+*{
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+header{
+    width: 100%;
+}
+header img{
+    width: 30%;
+}
+
+header a{
+    color: #000;
+    position: relative;
+    left: 2.2rem;
+    top: -0.08rem;
+}
+#toggle{
+    width: 0.5rem;
+    border: none;
+    height: 0.2rem;
+    position: relative;
+    left: 1.69rem;
+    border-radius: 0.05rem;
+}
+video{
+    position: relative;
+    top: 0;
+    width: 3.7rem;
+    height: 2.1rem;
+    left: 0.02rem;  
+}
+source{
+    object-fit:fill;
+    
+}
+.counterpart{
+    width: 100%;
+}
+/* .counterpart img{
+    width: 5%;
+    transform:rotate(180deg);
+} */
+.counterpart a{
+    font-weight: 600;
+    font-size: 0.13rem;
+}
+#attention{
+    margin: 0.1rem auto;
+    width: 95%;
+    border-radius: 0.1rem;
+    background-color: rgb(243, 242, 242);
+}
+#attention img{
+    width: 10%;
+    padding: 0.07rem;
+}
+#attention span:nth-of-type(1){
+    position: relative;
+    top: -0.27rem;
+    font-size: 0.15rem;
+    font-weight: bold;
+}
+#attention span:nth-of-type(2){
+    position: relative;
+    left: -0.81rem;
+    top: -0.10rem;
+    color: rgb(131, 131, 131);
+}
+.collect{
+    display: flex;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+.collect li{
+    width: 30%;
+    border-radius: 0.25rem;
+    margin: 0.1rem 0.12rem 0.1rem;
+    padding: 0.06rem 0 0.08rem 0.2rem;
+    border: 0.5px solid #aaaaaa;
+}
+.slip p{
+    font-size: 0.18rem;
+    font-weight: 600;
+    margin: 0.1rem 0 0.1rem 0.05rem;
+}
+.collect a:nth-of-type(1){
+    font-size: 0.2rem;
+}
+.collect a:nth-of-type(2){
+    font-size: 0.12rem;
+    position: relative;
+    top: -0.01rem;
+}
+.miniview{
+    margin: 0 auto;
+    display: flex;
+    width: 95%;
+    display: -webkit-box;
+    overflow-x: scroll;
+}
+.miniview div{
+    border-radius: 0.03rem;
+    width: 1.8rem;
+    margin: 0 0.03rem 0;
+}
+.miniview img{
+    width: 1.8rem;
+}
+.miniview p{
+    display: flex;
+    font-size: 0.17rem;
+    font-weight: 500;
+}
+
+section{
+    margin: 0.1rem 0.1rem 0 0.1rem;
+}
+section h4{
+    font-size: 0.18rem;
+    font-weight: 600;
+}
+section .teletext {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 0.1rem;
+    margin-bottom: 0.52rem;
+}
+.teletext li {
+    width: 48%;
+    margin-bottom: 0.1rem;
+    position: relative;
+}
+.teletext li p {
+    font-size: 0.16rem;
+}
+.teletext li img {
+    width: 100%;
+    border-radius: 5px;
+}
+.tc{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+#tab{
+    margin: 0 auto;
+}

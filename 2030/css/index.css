@@ -1,0 +1,116 @@
+header {
+  width: 100%;
+  padding: 0.08rem;
+  background-color: #991d2f;
+}
+header .nav {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  height: 0.3rem;
+  align-items: center;
+  margin-top: 0.1rem;
+}
+header .nav li {
+  margin: 0 0.2rem;
+}
+header .nav li a {
+  color: rgba(247, 243, 243, 0.6);
+}
+header .nav li:nth-child(3) a {
+  font-size: 0.24rem;
+  font-weight: bold;
+  color: #fff;
+}
+.nav::-webkit-scrollbar {
+  display: none;
+}
+.searchbar {
+  display: flex;
+  height: 0.32rem;
+  align-items: center;
+}
+.logo img {
+  display: block;
+  width: 25vw;
+  height: 6.6667vw;
+  color: #fff;
+}
+.searchForm {
+  width: 65%;
+  background-color: #384859;
+  border-radius: 0.3rem;
+  position: relative;
+  overflow: hidden;
+  height: 0.26rem;
+  margin: 0 0.2rem;
+}
+.icon-sousuo {
+  font-size: 0.1666rem;
+  right: 0.05rem;
+  top: 0.03rem;
+  color: #fff;
+}
+#search{
+  width: 99%;
+  height: 99%;
+  background-color: #ffffff;
+  padding-left: 0.0666rem;
+  border-radius: 0.3rem;
+
+}
+.head {
+  width: 100%;
+  padding: 0.1rem;
+  background-color: #fff;
+}
+#midgrid{
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  top: -0.1rem;
+}
+#midgrid img{
+  width: 0.4rem;
+}
+#midgrid>div{
+  text-align: center;
+}
+figure{
+  width: 85%;
+  margin: 0 auto;
+  /* margin-top: -0.8rem; */
+}
+figure h2{
+  margin-bottom: 0.03rem;
+}
+figure img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+
+section{
+  margin: 0.1rem 0.1rem 0 0.1rem;
+}
+section .teletext {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0.1rem;
+  margin-bottom: 0.52rem;
+}
+.teletext li {
+  width: 48%;
+  margin-bottom: 0.1rem;
+  position: relative;
+}
+.teletext li p {
+  font-size: 0.13rem;
+}
+.teletext li img {
+  width: 100%;
+  border-radius: 5px;
+}

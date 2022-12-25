@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #bgbox{
+        width: 200px;
+        height: 200px;
+    }
+
+</style>
+<body>
+    <img id="img" src="http://p1.music.126.net/TzMwwPWS6lONrPqOiOrZFw==/109951165693801980.jpg ">
+    <canvas id="canvas" width="1000px" height="300px" style="display: none;"></canvas>
+    <div id="bgBox"></div>
+<script>
+
+    var ctx = canvas.getContext("2d");
+    img.onload = function () {
+    ctx.drawImage(img, 0, 0)
+    img.style.display = 'none'
+    
+    let imgData = (ctx.getImageData(0, 0, img.width, img.height)).data  //x开始复制的左上角位置的 x 坐标。 y 开始复制的左上角位置的 y 坐标。 width 将要复制的矩形区域的宽度。 height 将要复制的矩形区域的高度。 
+     // ImageData.data	类型为Uint8ClampedArray的一维数组，每四个数组元素代表了一个像素点的RGBA信息，每个元素数值介于0~255
+
+    let r = 0,
+        g = 0,
+        b = 0;
+    
+    for(let row = 0; row < img.height; row++){
+        for(let col = 0; col < img.width; col++){
+            r +=data[(img.width *row +col)*4]
+            g +=data[(img.width *row +col)*4 + 1]
+            b +=data[(img.width *row +col)*4 + 2]
+
+        }
+    }    
+
+    r /= img.width* img.height 
+    g /= img.width* img.height 
+    b /= img.width* img.height 
+
+    r = Math.round(r)
+    g = Math.round(g)
+    b = Math.round(b)
+   
+    bgBox.style.backgroundImage = `linear-gradient(rgb(${r}),rgb(${g}),rgb(${b}))`;
+  }
+</script>
+</body>
+</html>

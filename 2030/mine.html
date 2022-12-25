@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./font_3773143_mlwbitziz5e/iconfont.css">
+    <link rel="stylesheet" href="./css/mine.css"/>
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/mylogin.css">
+  </head>
+  <body>
+    <script src="./js/rem.js"></script>
+    <header>
+      <div class=""></div>
+      <div class="loginHeader">
+        <div class="loginJump">
+          <img src="./images/mine/logo_main_gray.png" alt="" />
+        </div>
+        <h4 id="adminBtn" href="javascript:void(0)">点击登录</h4>
+      </div>
+  
+      <ul class="userinfo">
+        <li>
+          <a>0</a>
+          <p>关注</p>
+        </li>
+        <li>
+          <a>0</a>
+          <p>粉丝</p>
+        </li>
+        <li>
+          <a>10</a>
+          <p>积分</p>
+        </li>
+        <li>
+          <a>0</a>
+          <p>发布</p>
+        </li>
+      </ul>
+    </header>
+    <div id="login" class="login">
+      <span><a id="closeBtn" href="javascript:void(0)">关闭</a></span>
+      <div id="login-title" class="login-title">
+          <a>登录</a>         
+      </div>
+      <form action="" method="post" id="fm" name="fm" onsubmit="checkform()">
+        <div>
+            <label for="user">账户：</label>
+            <input type="text" id="user" name="user" class="input" onfocus="testFocus1(this)" onblur="testBlur1(this)">
+            <span id="error1"></span>
+        </div>
+
+        <div>
+            <label for="pwd">密码：</label>
+            <input type="password" id="pwd" name="pwd" class="input" onfocus="testFocus(this)" onblur="testBlur(this)">
+            <span id="error2"></span>
+        </div>
+
+        <div>
+            <input type="submit" value="确认注册" id="loginSubmit" onclick="checkform()">
+        </div>
+    </form>
+ 
+  
+  </div>
+    <div class="history">
+      <div class="title">
+        <h4>播放记录</h4>
+        <i class="iconfont icon-double-arro-right"></i>
+      </div>
+      <div class="slipbox">
+        <!-- <img src="./images/mine/slideitem1.jfif" alt="">
+        <img src="./images/mine/slideitem2.jfif" alt="">
+        <img src="./images/mine/slideitem3.jfif" alt="">
+        <img src="./images/mine/slideitem4.jfif" alt="">
+        <img src="./images/mine/slideitem5.jfif" alt=""> -->
+    </div>
+    </div> <ul class="userinfo2">
+      <li>
+        <a class="iconfont icon-zhinanzhen_o"></a>
+        <p>主页</p>
+      </li>
+      <li>
+        <a class="iconfont icon-huancun"></a>
+        <p>缓存</p>
+      </li>
+      <li>
+        <a class="iconfont icon-pinglun"></a>
+        <p>评论</p>
+      </li>
+      <li>
+        <a class="iconfont icon-yijianzhengji"></a>
+        <p>征集</p>
+      </li>
+    </ul>
+
+    <ul class="list">
+      
+      <li>
+        <i class="iconfont icon-shoucang"></i>
+        <p>收藏</p>
+      </li>
+      <li>
+        <i class="iconfont icon-gouwuche"></i>
+        <p>我的</p>
+      </li>
+      <li>
+        <i class="iconfont icon-huiyuanquanyi"></i>
+        <p>会员权益专区</p>
+      </li>
+      <li>
+        <i class="iconfont icon-tubiaolunkuo-"></i>
+        <p>用户反馈</p>
+      </li>
+      <li>
+        <i class="iconfont icon-chuangzuozhezhongxin"></i>
+        <p>央视频号创作者入驻</p>
+      </li>
+      <li>
+        <i class="iconfont icon-shezhi"></i>
+        <p>设置</p>
+      </li>
+    </ul>
+    <nav>
+      <ul>
+        <li>
+            <a href="./index.html">
+                <span class="iconfont icon-zhuye"></span>
+                <p>首页</p>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="iconfont icon-dianshi"></span>
+                <p>电视</p>
+            </a>
+        </li>
+        <li>
+            <a href="./live.html">
+                <span class="iconfont icon-q24gl-stopSquare"></span>
+                <p>直播</p>
+            </a>
+        </li>
+        <li>
+            <a href="./member.html">
+                <span class="iconfont icon-jinrongquan"></span>
+                <p>会员</p>
+            </a>
+        </li>
+        <li>
+            <a href="./mine.html">
+                <span class="iconfont icon-wode"></span>
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+    </nav>
+  <script>
+    
+    var login=document.getElementById('login');
+    var bg=document.getElementById('bg');
+    var adminBtn=document.getElementById('adminBtn');
+    adminBtn.onclick=function(){
+        login.style.height = "70%";
+        error1.innerHTML = "";    
+        error2.innerHTML = "";     
+         // login.style.display = "block";
+    }
+    var closeBtn=document.getElementById('closeBtn');
+    closeBtn.onclick=function(){
+        login.style.height = "0%";
+        // login.style.display="none";
+        
+    }
+    var user = document.getElementById("user");
+    var error = document.getElementsByClassName("error");
+    var pwd = document.getElementById("pwd");
+    var input = document.getElementsByClassName("input");
+    function checkform(){
+        if(user.value.length < 6 && pwd.value.length < 6){
+          addEventListener('click',()=>alert('账户或密码格式错误'),{once:true})
+
+
+        }
+        else{
+          window.location.replace("./mainpage.html");
+  
+        }
+    } 
+    function testFocus1(that) {
+        if ((that.value.length >= 0 && that.value.length < 6) || that.value.length >11){
+            document.getElementById("error1").innerHTML = "请输入6~11位的用户名";
+        }
+    }
+    function testBlur1(that) {
+        if ((that.value.length>0 && that.value.length<6) || that.value.length >11){
+            document.getElementById("error1").innerHTML = "用户名应为6-11位";
+        }else if(that.value.length >= 6 &&that.value.length <= 11){
+            document.getElementById("error1").innerHTML = "";
+        }else{
+            document.getElementById("error1").innerHTML = "用户名不能为空"
+        }
+    }
+    function testFocus(that) {
+        if ((that.value.length >= 0 && that.value.length < 6) || that.value.length >18){
+            document.getElementById("error2").innerHTML = "请输入6~18位的密码";
+        }
+    }
+    function testBlur(that) {
+        if ((that.value.length>0 && that.value.length<6) || that.value.length >11){
+            document.getElementById("error2").innerHTML = "密码应为6-11位";
+        }else if(that.value.length >= 6 &&that.value.length <= 18){
+            document.getElementById("error2").innerHTML = "";
+        }else{
+            document.getElementById("error2").innerHTML = "密码不能为空";
+        }
+    }    
+
+
+    var xmlhttp;
+		if (window.XMLHttpRequest) {
+			//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			// IE6, IE5 浏览器执行代码
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange = function () {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				//xmlhttp.responseText;
+				//你的ajax代码写在这里，其他位置除了open的前两个参数都不需要也不要改变。
+        var eslipbox = document.getElementsByClassName("slipbox")[0];
+        function addLi(li){
+          var n = ` 
+          <div>     
+            <img src = "${li.img}">     
+            <p>${li.p}</p>   
+          </div>          
+          `;
+          var nli = document.createElement("li");
+          nli.innerHTML = n;
+          eslipbox.appendChild(nli);
+        }
+       
+        var json = JSON.parse(xmlhttp.responseText);/* 将字符串转换成JSON */
+          for(var i=0; i<json.length; i++){
+              addLi(json[i]);
+          }
+			}
+		}
+		xmlhttp.open("GET", "./json/mine.json", true);
+		xmlhttp.send();
+
+  </script>
+  </body>
+</html>

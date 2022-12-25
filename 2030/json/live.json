@@ -1,0 +1,53 @@
+[
+    {
+       "dl":"12月06日 &nbsp;周二", 
+       "img":"../images/cheer/miniMorocco.png",
+       "a":"摩洛哥",
+       "img1":"../images/cheer/miniSpain.png",
+       "a1":"西班牙",
+       "p":"time",
+       "button":"预约",
+       "h4":"解说员：贺炜"
+    },
+    {
+        "dl":"12月07日 &nbsp;周三", 
+        "img":"../images/cheer/miniPortugal.png",
+        "a":"葡萄牙",
+        "img1":"../images/cheer/miniSwitzerland.png",
+        "a1":"瑞士",
+        "p":"time",
+        "button":"预约",
+        "h4":"解说员：孙思辰"
+     },
+     {
+        "dl":"12月09日 &nbsp;周五", 
+        "img":"../images/cheer/miniCroatia.png",
+        "a":"克罗地亚",
+        "img1":"../images/cheer/miniBrazil.png",
+        "a1":"巴西",
+        "p":"time",
+        "button":"预约",
+        "h4":"解说员：曾侃"
+     },
+     {
+        "dl":"12月10日 &nbsp;周六", 
+        "img":"../images/cheer/miniNetherlands.png",
+        "a":"荷兰",
+        "img1":"../images/cheer/miniArgentina.png",
+        "a1":"阿根廷",
+        "p":"time",
+        "button":"预约",
+        "h4":"解说员：贺炜"
+     },
+     {
+        "dl":"12月11日 &nbsp;周日", 
+        "img":"../images/cheer/miniEngland.png",
+        "a":"英格兰",
+        "img1":"../images/cheer/miniFrance.png",
+        "a1":"法国",
+        "p":"time",
+        "button":"预约",
+        "h4":"解说员：孙思辰"
+     }
+    
+]

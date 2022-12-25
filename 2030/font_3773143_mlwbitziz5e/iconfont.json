@@ -1,0 +1,135 @@
+{
+  "id": "3773143",
+  "name": "sadd",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6334468",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "9924651",
+      "name": "意见征集",
+      "font_class": "yijianzhengji",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "11372694",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e8b7",
+      "unicode_decimal": 59575
+    },
+    {
+      "icon_id": "11372701",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e8b9",
+      "unicode_decimal": 59577
+    },
+    {
+      "icon_id": "16137348",
+      "name": "会员权益",
+      "font_class": "huiyuanquanyi",
+      "unicode": "e7c8",
+      "unicode_decimal": 59336
+    },
+    {
+      "icon_id": "18514860",
+      "name": "创作者中心",
+      "font_class": "chuangzuozhezhongxin",
+      "unicode": "e73b",
+      "unicode_decimal": 59195
+    },
+    {
+      "icon_id": "493561",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e7b7",
+      "unicode_decimal": 59319
+    },
+    {
+      "icon_id": "729524",
+      "name": "购物车",
+      "font_class": "gouwuche1",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "2076265",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
+      "icon_id": "3670098",
+      "name": "用户反馈",
+      "font_class": "tubiaolunkuo-",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "4608979",
+      "name": "缓存",
+      "font_class": "huancun",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "5387848",
+      "name": "指南针_o",
+      "font_class": "zhinanzhen_o",
+      "unicode": "eb70",
+      "unicode_decimal": 60272
+    },
+    {
+      "icon_id": "577365",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e752",
+      "unicode_decimal": 59218
+    },
+    {
+      "icon_id": "2486579",
+      "name": "电视",
+      "font_class": "dianshi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "7594084",
+      "name": "24gl-stopSquare",
+      "font_class": "q24gl-stopSquare",
+      "unicode": "ea76",
+      "unicode_decimal": 60022
+    },
+    {
+      "icon_id": "9550455",
+      "name": "金融圈",
+      "font_class": "jinrongquan",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "11594398",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "23500933",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e869",
+      "unicode_decimal": 59497
+    }
+  ]
+}

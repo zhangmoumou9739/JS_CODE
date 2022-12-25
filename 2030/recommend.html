@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/recommend.css">
+    <link rel="stylesheet" href="./font_3773143_mlwbitziz5e/iconfont.css">
+</head>
+<body>
+    <script src="./js/rem.js"></script>
+    <header>
+        <img src="./images/nav/logo_main.png" alt="">
+        <a href="./index.html">返回</a>
+    </header>
+    <div id="tab">
+        <div class="tc show"> <video controls>  
+            <source  class="tc show" src="./images/recommend/recommend1_1.mp4" alt=""></video></div>          
+            
+        <div class = "counterpart">
+            <a>CCTV-17《中华风物》</a>
+            <button id = "toggle">画中画</button>  
+            <!-- <img src="./images/recommend/iconUnfold.png" 
+            alt="" id="btn1" onclick="exchange()"> -->
+            <!-- <div >
+                <p class="unfold">起于春秋荣于唐宋，千里舳舻千载运河。CCTV-17《中华风物》运河美食篇，
+                    邀您品味每一寸风物背后的人文之美、乡土之美。芡实隐于莲叶，八鲜聚于
+                    鸭腹，莼鲈芳鲜，藕香蟹肥，与体验者一同探访运河边的地道风物！</p>
+            </div> -->
+        </div>
+    
+    <ul class="collect">
+        <li>       
+            <a class="iconfont icon-dianzan"></a>
+            <a>点赞</a>
+        </li>
+        <li>
+            <a class="iconfont icon-shoucang"></a>
+            <a>收藏</a>
+        </li>
+        <li>
+            <a class="iconfont icon-pinglun"></a>
+            <a>评论</a>
+        </li>
+    </ul>    
+    <div id="attention">
+        <img src="./images/recommend/attention.jpg" alt="">
+        <span>新农研究院</span>
+        <span>125个视频·5699个点赞</span>
+    </div>
+    
+        <div class="slip">
+            <p>选集</p>
+            <div class="miniview">
+                
+                <div class="cur">
+                    <img  src="./images/recommend/miniview1.jpg"  alt="">
+                    <p>《中华风物》第1集：芡实遍芳塘</p>
+                </div>
+                <div>
+                    <img src="./images/recommend/miniview2.jpg" alt="">
+                    <p>《中华风物》第2集：水暖鸭先知</p>
+                </div>
+                <div>
+                    <img src="./images/recommend/miniview3.jpg" alt="">
+                    <p>《中华风物》第3集：莼鲈正芳鲜</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <h4>体育</h4>
+        <ul class="teletext">
+          <li>
+            <img src="./images/recommend/section1.jpg" alt="" />
+            <p>味知道·金秋好风味</p>
+    
+          </li>
+          <li>
+            <img src="./images/recommend/section2.jpg" alt="" />
+            <p>美味里的中国</p>
+          </li>
+          <li>
+            <img src="./images/recommend/section3.jpg" alt="" />
+            <p>点赞最美家乡</p>  
+          </li>
+          <li>
+            <img src="./images/recommend/section4.jpg" alt="" />
+            <p>味道（4K）</p>
+          </li>
+          <li>
+            <img src="./images/recommend/section5.jpg" alt="" />
+            <p>嘿！小面</p>     
+          </li>
+          <li>
+            <img src="./images/recommend/section6.jpg" alt="" />
+            <p>听起来很好吃</p>
+          </li>     
+        </ul>
+    
+      </section>
+
+      <script>
+        // var tt = tab.getElementsByClassName("miniview")[0];
+        // var span = tt.getElementsByTagName("span");
+        // var tc = tab.querySelectorAll(".tc");
+
+        // for(var i = 0; i<span.length; i++) {
+        //     span[i].index = i;
+
+        //         // 让所有的span去除cur类，所有的tc都隐藏。
+        //         for(var j = 0; j<span.length; j++){
+        //             span[j].classList.remove("cur");
+        //             tc[j].classList.remove("show");
+        //         }
+
+        //         this.classList.add("cur");
+        //         tc[this.index].classList.add("show");
+            
+        // }
+        var btn = document.querySelector('#toggle');
+        var video = document.querySelector('video');
+
+        function printPipWindowDimenisons(evt){
+            var pipWindow = evt.target;
+        }
+        // video.addEventListener('enterpicP', enter);
+        // video.addEventListener('leavepicP', leave);
+
+        async function handleToggle(){
+            try{
+                if(video !== document.pictureInpictureElement){
+                    await video.requestPictureInPicture()
+
+                }else{
+                    await document.exitPictureInPicture()
+                    
+                }
+                this.disabled = true;
+            }catch (error){
+                
+
+            }finally{
+                this.disabled = false;
+            }
+        }
+
+        btn.addEventListener('click', handleToggle);
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+[
+    {
+       "a":"1",
+       "img":"../images/cheer/Argentina.png" ,
+       "p":"阿根廷队",
+       "i":"111111",
+       "b":"热度：",
+       "button":"助威"
+    },{
+        "a":"1",
+        "img":"../images/cheer/portugal.png" ,
+        "p":"葡萄牙队",
+        "i":"107813",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/France.png" ,
+        "p":"法国队",
+        "i":"31443",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/Brazil.png" ,
+        "p":"巴西队",
+        "i":"23370",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/Morocco.png" ,
+        "p":"摩洛哥队",
+        "i":"23331",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/Croatia.png" ,
+        "p":"克罗地亚队",
+        "i":"14810",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/Germany .png" ,
+        "p":"德国队",
+        "i":"7708",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/England.png" ,
+        "p":"英格兰队",
+        "i":"6763",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/Serbia.png" ,
+        "p":"塞尔维亚队",
+        "i":"6669",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/Spain.png" ,
+        "p":"西班牙队",
+        "i":"4705",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/Netherlands.png" ,
+        "p":"荷兰队",
+        "i":"41011",
+        "b":"热度：",
+        "button":"助威"
+     },{
+        "a":"1",
+        "img":"../images/cheer/Japan.png" ,
+        "p":"日本队",
+        "i":"2622",
+        "b":"热度：",
+        "button":"助威"
+     }
+]

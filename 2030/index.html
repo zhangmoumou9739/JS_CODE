@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./images/font_3773143_mlwbitziz5e/iconfont.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/slideshow.css">
+  </head>
+<style>
+ 
+</style>
+  <body>
+    <script src="./js/rem.js"></script>
+    <header>
+      <div class="searchbar">
+        <div class="logo">
+          <img src="images/nav/logo_main_white.png" alt="">
+        </div>
+    
+        <div class="searchForm">
+
+          <!-- <div class="iconfont icon-sousuo"></div> -->
+          <input type="text" placeholder="航拍中国" id="search" />
+        </div>
+      </div>
+      <ul class="headnav"></ul>
+    </header>  
+    <div id="slideback">
+      <div id="rotation">
+        <ul id="imglist">
+            <li><a href=""><img src="./images/index/rotation1.jpg" alt=""></a></li>
+            <li><a href=""><img src="./images/index/rotation2.jpg" alt=""></a></li>
+            <li><a href=""><img src="./images/index/rotation3.jpg" alt=""></a></li>
+            <li><a href=""><img src="./images/index/rotation4.jpg" alt=""></a></li>
+            <li><a href=""><img src="./images/index/rotation1.jpg" alt=""></a></li>
+        </ul>
+        <ul id="icolist">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="prev">&lt;</div>
+        <div class="next">&gt;</div>
+      </div>
+      <div id="test"></div>
+      
+    </div>
+    <div id="midgrid">
+      <div class="midicon">
+        <img src="./images/index/midnav1.png" alt="">
+        <div>世界杯</div>
+      </div>
+      <div class="midicon">
+        <img src="./images/index/midnav2.png" alt="">
+        <div>热播剧</div>
+      </div>
+      <div class="midicon">
+        <img src="./images/index/midnav3.png" alt="">
+        <div>央商城</div>
+      </div>
+      <div class="midicon">
+        <img src="./images/index/midnav4.png" alt="">
+        <div>会员区</div>
+      </div>
+    </div>
+    <figure>
+      <h2>探访运河边的地道生物</h2>
+      <img src="./images/index/thirdlayerpage.jfif"  onclick= "skip()" alt="" />
+    </figure>
+    <section>
+      <h4>体育</h4>
+      <ul class="teletext">
+        <li>
+          <img src="./images/index/teletext1.jfif" alt="" />
+          <p>传奇金杯：传奇时空 球王贝利的故事</p>
+  
+        </li>
+        <li>
+          <img src="./images/index/teletext2.jfif" alt="" />
+          <p>传奇金杯：内马尔—完美乱局</p>
+        </li>
+        <li>
+          <img src="./images/index/teletext3.jfif" alt="" />
+          <p>巴西传奇球星卡洛斯：从华丽足球走来的“带炮”后卫（上集）</p>  
+        </li>
+        <li>
+          <img src="./images/index/teletext4.jfif" alt="" />
+          <p>带伤归队只为和男篮站在一起，周琦：为国出战的荣誉让人无法拒绝</p>
+        </li>
+        <li>
+          <img src="./images/index/teletext5.jfif" alt="" />
+          <p>短道速滑世界杯阿拉木图站女子3000米接力决赛中国队获得第四</p>     
+        </li>
+        <li>
+          <img src="./images/index/teletext6.jfif" alt="" />
+          <p>为国出战是最大荣耀，吴前透露杜锋给予他的帮助溢于言表</p>
+        </li>     
+      </ul>
+    </section>
+    <nav>
+      <ul>
+          <li>
+              <a href="#">
+                  <span class="iconfont icon-zhuye"></span>
+                  <p>首页</p>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <span class="iconfont icon-dianshi"></span>
+                  <p>电视</p>
+              </a>
+          </li>
+          <li>
+              <a href="./live.html">
+                  <span class="iconfont icon-q24gl-stopSquare"></span>
+                  <p>直播</p>
+              </a>
+          </li>
+          <li>
+              <a href="./member.html">
+                  <span class="iconfont icon-jinrongquan"></span>
+                  <p>会员</p>
+              </a>
+          </li>
+          <li>
+              <a href="./mine.html">
+                  <span class="iconfont icon-wode"></span>
+                  <p>我的</p>
+              </a>
+          </li>
+      </ul>
+  </nav>
+  <script>
+    var esico = document.getElementById('icolist').getElementsByTagName('li');
+    var eicolist = document.querySelector('#icolist');
+    var eimglist = document.querySelector('#imglist');
+    var etest = document.querySelector('#test');
+    var eprev = document.querySelector('.prev');
+    var enext = document.querySelector('.next');
+    var left = 0;
+    var timer;
+
+    esico[2].style.backgroundColor = 'red';
+    run();
+    function run(){
+      if (left <= -400) {
+      left = 0;
+      }
+      var m = Math.floor(-left/100) ;
+      imglist.style.marginLeft = left + '%';
+      var n = (left % 100 == 0) ? n = 1200 : n = 6;
+      left -= 2;
+      icochange(m);
+      timer = setTimeout(run,n);
+    }
+
+    function icochange(m){
+      for (let index = 0; index < esico.length; index++) {
+        esico[index].style.backgroundColor = '';
+      }
+      if (m < esico.length) {
+        esico[m].style.backgroundColor = '#fff';
+      }
+
+    }
+
+    function imgchange(n){
+      let lt = - (n  * 100)
+      imglist.style.marginLeft = lt + '%';
+      left = lt;
+    }
+    eprev.onclick = function(){
+      let prevgo = Math.floor(-left/100)-1;
+      if (prevgo == -1) {
+        prevgo =3;
+      }
+      imgchange(prevgo);
+      icochange(prevgo);
+    }
+
+    enext.onclick = function(){
+      let nextgo = Math.floor(-left/100)+1;
+      if (nextgo == 4) {
+        nextgo =0;
+      }
+      imgchange(nextgo);
+      icochange(nextgo);
+    }
+
+    eicolist.onclick = function(){
+      var tg = event.target;
+      let ico = tg.innerHTML - 1;
+      imgchange(ico);
+      icochange(ico);
+    }   
+
+    eimglist.onmouseover = function(){
+      clearTimeout(timer);
+    }
+
+    eimglist.onmouseout = function(){
+      run();
+    }
+    function skip(){
+      window.location.replace("./recommend.html");
+    }
+  </script>
+  </body>
+</html>

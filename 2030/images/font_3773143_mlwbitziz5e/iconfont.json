@@ -1,0 +1,51 @@
+{
+  "id": "3773143",
+  "name": "sadd",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "577365",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e752",
+      "unicode_decimal": 59218
+    },
+    {
+      "icon_id": "2486579",
+      "name": "电视",
+      "font_class": "dianshi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "7594084",
+      "name": "24gl-stopSquare",
+      "font_class": "q24gl-stopSquare",
+      "unicode": "ea76",
+      "unicode_decimal": 60022
+    },
+    {
+      "icon_id": "9550455",
+      "name": "金融圈",
+      "font_class": "jinrongquan",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "11594398",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "23500933",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e869",
+      "unicode_decimal": 59497
+    }
+  ]
+}

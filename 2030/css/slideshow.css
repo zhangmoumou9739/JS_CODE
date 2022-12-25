@@ -1,0 +1,63 @@
+*{
+    list-style: none;
+}
+#rotation{ 
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;   
+    position: relative;
+    border-radius: 0.2rem;
+    
+} 
+#slideback{
+    width: 100%;
+    background-image: linear-gradient(#991d2f,#991d2f,#ffffff,#ffffff);
+    margin-top: -0.01rem;
+    padding-top: 0.2rem;
+}   
+#imglist{
+    width: 17.6rem;
+    display: flex;
+}
+#imglist img{
+    width: 3.19rem;
+}
+#icolist{
+    position: relative;
+    left: 1.315rem;
+    bottom: 0.05rem;
+    display: flex;
+}
+#icolist li{
+    width: 0.05rem;
+    height: 0.05rem;
+    border-radius: 50%;
+    background: #666;
+    color: #fff;
+    margin: 0.03rem;
+}
+.prev, .next{
+    background: #0e3368;
+    height: 0.2rem;
+    width: 0.15rem;
+    position: relative;
+    color: #fff;
+    font-size: 0.1rem;
+    padding: 0.01rem;
+    opacity: 0.6;
+}
+.prev{
+    bottom: 1.1785rem;
+}
+.next{
+    bottom: 1.4rem;
+    right: -3.0333rem;
+} 
+#test{
+    position: fixed;
+    width: 100%;
+    height: 0.5rem;
+    opacity: 0;  
+    top: 2.2rem;
+    z-index: 1000;  
+}
